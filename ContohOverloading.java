@@ -7,19 +7,21 @@ public class ContohOverloading {
     }
 
     public static double hitungLuas(double jariJari,Boolean isiLingkaran) {
-        double Math;
-        return Math * jariJari * jariJari;
-    }else{
-        return 0;
+        if (isiLingkaran) {
+            return Math.PI * jariJari * jariJari;
+        } else {
+            return 0;
+        }
     }
-}
 
     public static void main(String[] args) {
         double luasPersegi = hitungLuas(5);
         System.out.println(" Luas Persegi: " + luasPersegi);
 
-        double luasPersegiPanjang = hitungLuas(4,6);
-        System.out.println("Luas Persegi Panjang : " luasPersegiPanjang);
+        double luasPersegipanjang = hitungLuas(4, 6);
+        System.out.println("Luas Persegi Panjang : " + luasPersegipanjang);
 
-        double luasPersegiPanajang = hitungLuas()
+        double luasLingkaran = hitungLuas(3, true);
+        System.out.println("luas lingkaran: " + luasLingkaran);
     }
+}

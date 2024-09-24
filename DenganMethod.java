@@ -9,21 +9,23 @@ public class DenganMethod {
 
         int totalPenghasilan =hitungTotalPenghasilan(gajiPokok, tunjanganTransport, tunjanganMakan, bonus);
         int pajak = hitungPajak(totalPenghasilan);
-        int gajiBersih = hitungGajiBersih(totalPenghasilan);
+        int gajiBersih = hitungGajiBersih(totalPenghasilan, pajak);
 
-        tampilkanDetailGaji(gajiPokok, tunjanganTransport, tunjanganMakan, bonus);
+        tampilkanDetailGaji(gajiPokok, tunjanganTransport, tunjanganMakan, bonus, pajak, gajiBersih);
     }
 
-    public static int hitungTotalPenghasilan(int gajiPokok, int tunjanganTransport, int tunjanganMakan, int bonus){
+    public static int hitungTotalPenghasilan(int gajiPokok, int tunjanganTransport, int tunjanganMakan, int bonus) {
         return  gajiPokok + + tunjanganTransport + tunjanganMakan + bonus;
     }
-    public static int hitungPajak(int totalpenghasilan){
+    public static int hitungPajak(int totalpenghasilan)     {
         return totalpenghasilan* 10 / 100;
+
     }
-    public static int hitungGajiBersih(int totalpenghasilan, int pajak){
+    public static int hitungGajiBersih(int totalpenghasilan, int pajak) {
         return totalpenghasilan - pajak;
+
     }
 
-    public static void tampilkanDetailGaji(int gajiPokok, int tunjangan )
+    public static void tampilkanDetailGaji(int gajiPokok, int tunjanganTransport, int tunjanganMakan, int bonus,int pajak, int gajiBersih ){
     }
 }
